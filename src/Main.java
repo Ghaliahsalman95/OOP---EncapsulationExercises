@@ -16,14 +16,13 @@ Account accountTransfer=new Account("Sema","167890",10000);
         System.out.println("Name is: "+account.getName());
         System.out.println("ID is: "+account.getId());
         System.out.println("Balance is: "+account.getBalance());
-        System.out.println("Credit 15000:"+account.credit(15000));
-        System.out.println("Debit 2000 :"+account.debit(2000));
+        System.out.println("Credit 15000:"+account.credit(100));
+        System.out.println("Debit 5000 :"+account.debit(5000));
         System.out.println("-----------Test Transfer Method------------");
         if(account.transferTo(accountTransfer,2000)==1) {
             System.out.println("Transfer to Sema " +accountTransfer.getBalance());
         }else {System.out.println("You dont have much money to transfer");}
-        System.out.println("---------------------------------");
-
+        System.out.println("After Transfer: "+account.getBalance());
         //------------------------------------------
 Employee employee=new Employee("1234567890","Noha",100);
         System.out.println(employee.toString());

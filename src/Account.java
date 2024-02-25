@@ -47,14 +47,15 @@ public class Account {
         if(this.getBalance()>=amount) {
             credit=this.getBalance()-amount;
             this.setBalance(credit);
-        }return credit;
+        }return credit;//also getBalance;
             // return (setBalance(getBalance()-amount));}
     }
 
 public int transferTo(Account object,int amount){
-        if(amount>=this.getBalance()){
+        if(this.getBalance()>=amount){
         object.setBalance((object.getBalance())+amount);
-        setBalance((this.getBalance()-amount));
+        int netB=this.getBalance()-amount;
+        this.setBalance(netB);
             return 1;}
 
 return -1;}
